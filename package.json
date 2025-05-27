@@ -17,7 +17,7 @@
     "scripts": {
       "build": "tsc"
     },
-    "keywords": ["frontend", "utilities", "dom", "Is", "array", "object", "string", "number", "boolean", "function", "date", "url", "json"],
+    "keywords": ["frontend", "utilities", "dom", "Is", "array", "object", "string", "number", "boolean", "function", "date", "url", "json","Env"],
     "author": "",
     "license": "Mit",
     "devDependencies": {
