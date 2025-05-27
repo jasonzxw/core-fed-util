@@ -1,7 +1,9 @@
 declare global {
     interface Window {
         React?: unknown;
+        ReactDOM?: unknown;
         Vue?: unknown;
+        __VUE__?: unknown;
         ng?: unknown;
         Svelte?: unknown;
         Preact?: unknown;

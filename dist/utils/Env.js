@@ -3,14 +3,14 @@
  * @returns Boolean
  */
 export function isReactEnv() {
-    return typeof window !== 'undefined' && window.React !== undefined;
+    return typeof window !== 'undefined' && (window.React !== undefined || window.ReactDOM !== undefined);
 }
 /**
  * @description This function checks if the current environment is a Vue environment.
  * @returns Boolean
  */
 export function isVueEnv() {
-    return typeof window !== 'undefined' && window.Vue !== undefined;
+    return typeof window !== 'undefined' && (window.Vue !== undefined || window.__VUE__ !== undefined);
 }
 /**
  * @description This function checks if the current environment is an Angular environment.

@@ -1,7 +1,9 @@
 declare global {
     interface Window {
         React?: unknown;
+        ReactDOM?: unknown;
         Vue?: unknown;
+        __VUE__?: unknown;
         ng?: unknown;
         Svelte?: unknown;
         Preact?: unknown;
@@ -14,7 +16,7 @@ declare global {
  * @returns Boolean
  */
 export function isReactEnv(): boolean {
-    return typeof window !== 'undefined' && window.React !== undefined;
+    return typeof window !== 'undefined' && (window.React !== undefined || window.ReactDOM !== undefined);
 }
 
 /**
@@ -22,7 +24,7 @@ export function isReactEnv(): boolean {
  * @returns Boolean
  */
 export function isVueEnv(): boolean {
-    return typeof window !== 'undefined' && window.Vue !== undefined;
+    return typeof window !== 'undefined' && (window.Vue !== undefined || window.__VUE__ !== undefined);
 }
 
 /**
