@@ -1,27 +1,42 @@
 {
     "name": "core-fed-util",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "This is A collection of commonly used frontend utility functions‌",
     "type": "module",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
     "exports": {
-      ".": {
-        "import": "./dist/index.js"
-      }
+        ".": {
+            "import": "./dist/index.js"
+        }
     },
     "types": "./dist/index.d.ts",
     "files": [
-      "dist"
+        "dist"
     ],
     "scripts": {
-      "build": "tsc"
+        "build": "tsc"
     },
-    "keywords": ["frontend", "utilities", "dom", "Is", "array", "object", "string", "number", "boolean", "function", "date", "url", "json","Env"],
+    "keywords": [
+        "frontend",
+        "utilities",
+        "dom",
+        "Is",
+        "array",
+        "object",
+        "string",
+        "number",
+        "boolean",
+        "function",
+        "date",
+        "url",
+        "json",
+        "Env"
+    ],
     "author": "",
     "license": "Mit",
     "devDependencies": {
-      "typescript": "^5.0.0",
-      "tslib": "^2.0.0"
+        "typescript": "^5.0.0",
+        "tslib": "^2.0.0"
     }
-  } 
+}
