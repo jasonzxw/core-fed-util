@@ -1,0 +1,21 @@
+export declare function isType(value: unknown, type: string): boolean;
+export declare function isNumber(value: unknown): boolean;
+export declare function isString(value: unknown): boolean;
+export declare function isArray(value: unknown): boolean;
+export declare function isObject(value: unknown): boolean;
+export declare function isFunction(value: unknown): boolean;
+export declare function isBoolean(value: unknown): boolean;
+export declare function isNull(value: unknown): boolean;
+export declare function isUndefined(value: unknown): boolean;
+export declare function isDate(value: unknown): boolean;
+export declare function isRegExp(value: unknown): boolean;
+export declare function isSymbol(value: unknown): boolean;
+export declare function isBigInt(value: unknown): boolean;
+export declare function isError(value: unknown): boolean;
+export declare function isDateTime(value: unknown): boolean;
+export declare function isMap(value: unknown): boolean;
+export declare function isSet(value: unknown): boolean;
+export declare function isWeakMap(value: unknown): boolean;
+export declare function isWeakSet(value: unknown): boolean;
+export declare function isPromise(value: unknown): boolean;
+//# sourceMappingURL=Is.d.ts.map
