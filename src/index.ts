@@ -15,3 +15,5 @@ export * from './dataStructure/LinkedList'
 export * from './dataStructure/Queue'
 export * from './dataStructure/Stack'
 export * from './dataStructure/Graph'
+
+export * from './utils/Log'

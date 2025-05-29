@@ -32,7 +32,8 @@
         "Stack",
         "Json",
         "Env",
-        "Request"
+        "Request",
+        "Logger"
     ],
     "author": "",
     "license": "Mit",
