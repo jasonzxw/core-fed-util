@@ -5,6 +5,7 @@ export * from './utils/Obj';
 export * from './utils/Env';
 export * from './utils/Math';
 export * from './utils/Array';
+export * from './utils/Function';
 export * from './utils/Dom';
 export * from './utils/Date';
 export * from './utils/Is';

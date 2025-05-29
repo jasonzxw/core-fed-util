@@ -25,7 +25,7 @@ export class Logger {
      * @param {string} [name='global'] - Log name, used to identify the source of the log 
      * @param {LogLevel} [level=LogLevel.DEBUG] - Log level, controls which logs are printed
      */
-    constructor(name = 'global', level = LogLevel.DEBUG) {
+    constructor(name = 'global', level : LogLevel = LogLevel.DEBUG) {
         this.name = name;
         this.level = level;
         this.styles = {

@@ -23,7 +23,7 @@ export declare class Logger {
      * @param {string} [name='global'] - Log name, used to identify the source of the log
      * @param {LogLevel} [level=LogLevel.DEBUG] - Log level, controls which logs are printed
      */
-    constructor(name?: string, level?: 0);
+    constructor(name?: string, level?: LogLevel);
     setLevel(level: typeof LogLevel[keyof typeof LogLevel]): void;
     debug(...args: any[]): void;
     info(...args: any[]): void;
