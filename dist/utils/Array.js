@@ -86,3 +86,13 @@ export function bubbleArraySort(arr) {
 export function uniqueArray(arr) {
     return Array.from(new Set(arr));
 }
+/**
+ * @description Removes all occurrences of specified values from an array.
+ * @param arr {Array<T>}
+ * @param values {Array<T>}
+ * @returns {Array<T>}
+ */
+export function omitArrayValues(arr, values) {
+    const valueSet = new Set(values);
+    return arr.filter(item => !valueSet.has(item));
+}

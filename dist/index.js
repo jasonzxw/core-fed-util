@@ -5,3 +5,7 @@ export * from './utils/Env';
 export * from './utils/Math';
 export * from './utils/Array';
 export * from './utils/Dom';
+export * from './dataStructure/LinkedList';
+export * from './dataStructure/Queue';
+export * from './dataStructure/Stack';
+export * from './dataStructure/Graph';

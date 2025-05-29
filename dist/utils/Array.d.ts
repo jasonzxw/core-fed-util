@@ -56,4 +56,11 @@ export declare function bubbleArraySort(arr: Array<number>): Array<number>;
  * @returns {Array}
  */
 export declare function uniqueArray<T>(arr: Array<T>): Array<T>;
+/**
+ * @description Removes all occurrences of specified values from an array.
+ * @param arr {Array<T>}
+ * @param values {Array<T>}
+ * @returns {Array<T>}
+ */
+export declare function omitArrayValues<T>(arr: Array<T>, values: Array<T>): Array<T>;
 //# sourceMappingURL=Array.d.ts.map

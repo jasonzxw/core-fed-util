@@ -94,4 +94,15 @@ export function uniqueArray<T>(arr: Array<T>): Array<T> {
     return Array.from(new Set(arr));
 }
 
+/**
+ * @description Removes all occurrences of specified values from an array.
+ * @param arr {Array<T>}
+ * @param values {Array<T>}
+ * @returns {Array<T>}
+ */
+export function omitArrayValues<T>(arr: Array<T>, values: Array<T>): Array<T> {
+    const valueSet = new Set(values);
+    return arr.filter(item => !valueSet.has(item));
+}
+
 
