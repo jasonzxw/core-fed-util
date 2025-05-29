@@ -6,13 +6,13 @@ type ObjType = Record<string | number, any>;
  * @param {object} target 
  * @returns {object}
  */
-export function objDeepClone<t>(target: ObjType | Array<t>) : ObjType | Array<t> {
+export function objDeepClone<t>(target: ObjType | Array<t>): ObjType | Array<t> {
     if (target === null || typeof target !== 'object') {
         return target;
     }
 
     if (typeof target !== "object" || target === null) return target;
-    const clone : ObjType | Array<t> = Array.isArray(target) ? [] : {};
+    const clone: ObjType | Array<t> = Array.isArray(target) ? [] : {};
     for (const key in target) {
         if (target.hasOwnProperty(key)) {
             clone[key] = objDeepClone(target[key]);
@@ -62,7 +62,7 @@ export function isEqual(obj1: ObjType, obj2: ObjType): boolean {
  * @param child {any}
  * @param parent {any}
  */
-export function objInheritPrototype(child: any, parent:any) {
+export function objInheritPrototype(child: any, parent: any) {
     child.prototype = Object.create(parent.prototype);
     child.prototype.constructor = child;
 }
@@ -82,7 +82,7 @@ export function isEmptyObject(obj: object): boolean {
  * @param keys {Array<string | number>}
  * @returns {Record<string, any>}
  */
-function objPick(obj: ObjType, keys: Array<string | number>) : Record<string, any> {
+function objPick(obj: ObjType, keys: Array<string | number>): Record<string, any> {
     if (!isObject(obj)) return {};
     if (!Array.isArray(keys)) throw new TypeError('keys must be an array');
     return keys.reduce((acc, key) => {
@@ -97,7 +97,7 @@ function objPick(obj: ObjType, keys: Array<string | number>) : Record<string, an
  * @param keys {Array<string | number>}
  * @returns {Record<string, any>}
  */
-export function objOmit(obj: ObjType, keys: Array<string | number>) : Record<string, any> {
+export function objOmit(obj: ObjType, keys: Array<string | number>): Record<string, any> {
     if (!isObject(obj)) return {};
     if (!Array.isArray(keys)) throw new TypeError('keys must be an array');
     return Object.keys(obj).reduce((acc, key) => {
