@@ -31,7 +31,8 @@
         "Date",
         "Stack",
         "Json",
-        "Env"
+        "Env",
+        "Request"
     ],
     "author": "",
     "license": "Mit",
