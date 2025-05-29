@@ -1,6 +1,6 @@
 {
     "name": "core-fed-util",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "This is A collection of commonly used frontend utility functions‌",
     "type": "module",
     "main": "./dist/index.js",
