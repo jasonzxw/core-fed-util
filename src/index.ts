@@ -18,3 +18,8 @@ export * from './dataStructure/Stack'
 export * from './dataStructure/Graph'
 
 export * from './utils/Log'
+
+export * from './designMode/Observer'
+export * from './designMode/EvemtBus'
+export * from './designMode/Validator'
+export * from './designMode/Singleton'

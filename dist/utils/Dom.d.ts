@@ -70,12 +70,24 @@ export declare function isElInViewport(el: HTMLElement): boolean;
  */
 export declare function removeElement(el: HTMLElement): void;
 /**
- * @description Checks if an element has a child.
+ * @description Checks if an element contains a specific child element.
  * @param {HTMLElement} el
  * @param {HTMLElement} child
  * @returns {boolean}
  */
-export declare function hasChild(el: HTMLElement, child: HTMLElement): boolean;
+export declare function containSpecificEl(el: HTMLElement, child: HTMLElement): boolean;
+/**
+ * @description Finds all child elements of a given element.
+ * @param {HTMLElement} el
+ * @returns {HTMLElement[]}
+ */
+export declare function findAllChildElements(el: HTMLElement): HTMLElement[];
+/**
+ * @description Checks if an element has any child elements.
+ * @param {HTMLElement} el
+ * @returns {boolean}
+ */
+export declare function hasChildElements(el: HTMLElement): boolean;
 /**
  * @description Checks if the document has focus.
  * @returns {boolean}

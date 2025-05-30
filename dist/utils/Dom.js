@@ -119,16 +119,38 @@ export function removeElement(el) {
     }
 }
 /**
- * @description Checks if an element has a child.
+ * @description Checks if an element contains a specific child element.
  * @param {HTMLElement} el
  * @param {HTMLElement} child
  * @returns {boolean}
  */
-export function hasChild(el, child) {
+export function containSpecificEl(el, child) {
     if (el && child) {
         return el.contains(child);
     }
     return false;
+}
+/**
+ * @description Finds all child elements of a given element.
+ * @param {HTMLElement} el
+ * @returns {HTMLElement[]}
+ */
+export function findAllChildElements(el) {
+    if (!el || !(el instanceof HTMLElement) || !el.children) {
+        return [];
+    }
+    return Array.from(el.children);
+}
+/**
+ * @description Checks if an element has any child elements.
+ * @param {HTMLElement} el
+ * @returns {boolean}
+ */
+export function hasChildElements(el) {
+    if (!el || !(el instanceof HTMLElement) || !el.children) {
+        return false;
+    }
+    return el.children.length > 0;
 }
 /**
  * @description Checks if the document has focus.
