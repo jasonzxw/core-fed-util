@@ -11,6 +11,7 @@ export * from './utils/Date';
 export * from './utils/Is';
 export * from './utils/Request';
 export * from './utils/Async';
+export * from './utils/Regexp';
 export * from './dataStructure/LinkedList';
 export * from './dataStructure/Queue';
 export * from './dataStructure/Stack';
