@@ -63,4 +63,16 @@ export declare function uniqueArray<T>(arr: Array<T>): Array<T>;
  * @returns {Array<T>}
  */
 export declare function omitArrayValues<T>(arr: Array<T>, values: Array<T>): Array<T>;
+/**
+ * @description Converts an array of key-value pairs into a Map.
+ * @param array {Array<[string, any]>}
+ * @returns
+ */
+export declare function arrayToMap(array: Array<[string, any]>): Map<string, any>;
+/**
+ * @description Merges multiple arrays into a single array.
+ * @param arrays {Array<Array<T>>}
+ * @returns
+ */
+export declare function mergeArrays<T>(...arrays: Array<Array<T>>): Array<T>;
 //# sourceMappingURL=Array.d.ts.map

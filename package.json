@@ -34,7 +34,9 @@
         "Env",
         "Request",
         "Logger",
-        "Design Mode"
+        "Design Mode",
+        "Set",
+        "Map"
     ],
     "author": "",
     "license": "Mit",

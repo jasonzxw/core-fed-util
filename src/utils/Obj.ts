@@ -117,3 +117,34 @@ export function objToQueryString(obj: object): string {
         .map(([key, value]) => `${encodeURIComponent(key as string)}=${encodeURIComponent(value as string)}`)
         .join('&');
 }
+
+/**
+ * @description Converts an object to a Map.
+ * @param obj {ObjType}
+ * @returns 
+ */
+export function objectToMap(obj: ObjType): Map<string, any> {
+    if (!isObject(obj)) return new Map();
+    const map = new Map<string, any>();
+    Object.entries(obj).forEach(([key, value]) => {
+        map.set(key, value);
+    });
+    return map;
+}
+
+/**
+ * @description Merges multiple objects into one.
+ * @param objects {T[]}
+ * @returns 
+ */
+export function mergeObjects<T extends ObjType>(...objects: T[]): T {
+    return objects.reduce((acc, obj) => {
+        if (isObject(obj)) {
+            Object.keys(obj).forEach(key => {
+                //@ts-ignore
+                acc[key] = obj[key];
+            });
+        }
+        return acc;
+    }, {} as T);
+}

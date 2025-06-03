@@ -43,5 +43,17 @@ export declare function objOmit(obj: ObjType, keys: Array<string | number>): Rec
  * @returns {string}
  */
 export declare function objToQueryString(obj: object): string;
+/**
+ * @description Converts an object to a Map.
+ * @param obj {ObjType}
+ * @returns
+ */
+export declare function objectToMap(obj: ObjType): Map<string, any>;
+/**
+ * @description Merges multiple objects into one.
+ * @param objects {T[]}
+ * @returns
+ */
+export declare function mergeObjects<T extends ObjType>(...objects: T[]): T;
 export {};
 //# sourceMappingURL=Obj.d.ts.map

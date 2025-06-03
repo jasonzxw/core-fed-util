@@ -96,3 +96,25 @@ export function omitArrayValues(arr, values) {
     const valueSet = new Set(values);
     return arr.filter(item => !valueSet.has(item));
 }
+/**
+ * @description Converts an array of key-value pairs into a Map.
+ * @param array {Array<[string, any]>}
+ * @returns
+ */
+export function arrayToMap(array) {
+    return new Map(array);
+}
+/**
+ * @description Merges multiple arrays into a single array.
+ * @param arrays {Array<Array<T>>}
+ * @returns
+ */
+export function mergeArrays(...arrays) {
+    const mergedArray = [];
+    arrays.forEach(array => {
+        if (Array.isArray(array)) {
+            mergedArray.push(...array);
+        }
+    });
+    return mergedArray;
+}
