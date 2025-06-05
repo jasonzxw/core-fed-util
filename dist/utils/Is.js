@@ -159,3 +159,11 @@ export function isWeakSet(value) {
 export function isPromise(value) {
     return isType(value, 'Promise') && isFunction(value.then);
 }
+/**
+ * @description This function checks if the value is a DOM Element.
+ * @param value {unknown}
+ * @returns
+ */
+export function isElement(value) {
+    return value instanceof Element || (isObject(value) && isFunction(value.nodeType));
+}

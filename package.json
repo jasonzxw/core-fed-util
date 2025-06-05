@@ -38,7 +38,14 @@
         "Set",
         "Map"
     ],
-    "author": "",
+    "author": "Jason_Zuo",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jasonzxw/core-fed-util.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jasonzxw/core-fed-util/issues"
+    },
     "license": "Mit",
     "devDependencies": {
         "typescript": "^5.0.0",

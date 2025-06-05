@@ -119,4 +119,10 @@ export declare function isWeakSet(value: unknown): boolean;
  * @returns {boolean}
  */
 export declare function isPromise(value: unknown): boolean;
+/**
+ * @description This function checks if the value is a DOM Element.
+ * @param value {unknown}
+ * @returns
+ */
+export declare function isElement(value: unknown): boolean;
 //# sourceMappingURL=Is.d.ts.map
