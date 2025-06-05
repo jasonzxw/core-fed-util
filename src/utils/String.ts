@@ -125,3 +125,10 @@ export function generateRandomString(length: number = 10, chars: string = 'ABCDE
     }
     return result;
 }
+
+export function trimString(str: string): string {
+    if (typeof str !== 'string') {
+        return str;
+    }
+    return str.trim();
+}

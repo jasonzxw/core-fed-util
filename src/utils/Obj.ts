@@ -82,7 +82,7 @@ export function isEmptyObject(obj: object): boolean {
  * @param keys {Array<string | number>}
  * @returns {Record<string, any>}
  */
-function objPick(obj: ObjType, keys: Array<string | number>): Record<string, any> {
+export function objPick(obj: ObjType, keys: Array<string | number>): Record<string, any> {
     if (!isObject(obj)) return {};
     if (!Array.isArray(keys)) throw new TypeError('keys must be an array');
     return keys.reduce((acc, key) => {

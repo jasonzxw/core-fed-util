@@ -36,7 +36,8 @@
         "Logger",
         "Design Mode",
         "Set",
-        "Map"
+        "Map",
+        "Browser"
     ],
     "author": "Jason_Zuo",
     "repository": {

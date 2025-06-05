@@ -114,3 +114,9 @@ export function generateRandomString(length = 10, chars = 'ABCDEFGHIJKLMNOPQRSTU
     }
     return result;
 }
+export function trimString(str) {
+    if (typeof str !== 'string') {
+        return str;
+    }
+    return str.trim();
+}

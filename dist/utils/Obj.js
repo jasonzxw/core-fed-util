@@ -74,7 +74,7 @@ export function isEmptyObject(obj) {
  * @param keys {Array<string | number>}
  * @returns {Record<string, any>}
  */
-function objPick(obj, keys) {
+export function objPick(obj, keys) {
     if (!isObject(obj))
         return {};
     if (!Array.isArray(keys))

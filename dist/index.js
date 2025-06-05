@@ -15,6 +15,7 @@ export * from './utils/Regexp';
 export * from './utils/Json';
 export * from './utils/Set';
 export * from './utils/Map';
+export * from './utils/Browser';
 export * from './dataStructure/LinkedList';
 export * from './dataStructure/Queue';
 export * from './dataStructure/Stack';

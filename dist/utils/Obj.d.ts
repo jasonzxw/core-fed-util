@@ -31,6 +31,13 @@ export declare function objInheritPrototype(child: any, parent: any): void;
  */
 export declare function isEmptyObject(obj: object): boolean;
 /**
+ * @description Picks specific keys from an object.
+ * @param obj {ObjType}
+ * @param keys {Array<string | number>}
+ * @returns {Record<string, any>}
+ */
+export declare function objPick(obj: ObjType, keys: Array<string | number>): Record<string, any>;
+/**
  * @description Omits specific keys from an object.
  * @param obj {ObjType}
  * @param keys {Array<string | number>}

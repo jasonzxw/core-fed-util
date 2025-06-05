@@ -67,4 +67,5 @@ export declare function decodebase64(str: string): string;
  * @returns {string} A random string of the specified length using the specified characters
  */
 export declare function generateRandomString(length?: number, chars?: string): string;
+export declare function trimString(str: string): string;
 //# sourceMappingURL=String.d.ts.map
