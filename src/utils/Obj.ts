@@ -148,3 +148,48 @@ export function mergeObjects<T extends ObjType>(...objects: T[]): T {
         return acc;
     }, {} as T);
 }
+
+/**
+ * @description Freezes an object and its nested objects to prevent further modifications.
+ * @param obj {T}
+ * @returns 
+ */
+export function freezeObject<T extends ObjType>(obj: T): Readonly<T> {
+    if (!isObject(obj)) return obj as Readonly<T>;
+    Object.keys(obj).forEach(key => {
+        if (isObject(obj[key])) {
+            freezeObject(obj[key]);
+        }
+    });
+    return Object.freeze(obj) as Readonly<T>;
+}
+
+/**
+ * @description Freezes an object shallowly, preventing modifications to the top-level properties but allowing nested objects to be modified.
+ * @param obj {T}
+ * @returns 
+ */
+export function freezeObjectShallow<T extends ObjType>(obj: T): Readonly<T> {
+    if (!isObject(obj)) return obj as Readonly<T>;
+    return Object.freeze({ ...obj }) as Readonly<T>;
+}
+
+/**
+ * @description Freezes specific keys of an object, preventing modifications to those keys while allowing others to be modified.
+ * @param obj {T}
+ * @param keys {Array<string | number>}
+ * @returns 
+ */
+export function freezeObjectPickKeys<T extends ObjType>(obj: T, keys: Array<string | number>): void{
+    if (!isObject(obj)) void 0;
+    Object.keys(obj).forEach(key => {
+        if (keys.includes(key)) {
+            Object.defineProperty(obj, key, {
+                value: obj[key],
+                writable: false,
+                configurable: false,
+                enumerable: true
+            });
+        }
+    })
+}

@@ -144,3 +144,48 @@ export function mergeObjects(...objects) {
         return acc;
     }, {});
 }
+/**
+ * @description Freezes an object and its nested objects to prevent further modifications.
+ * @param obj {T}
+ * @returns
+ */
+export function freezeObject(obj) {
+    if (!isObject(obj))
+        return obj;
+    Object.keys(obj).forEach(key => {
+        if (isObject(obj[key])) {
+            freezeObject(obj[key]);
+        }
+    });
+    return Object.freeze(obj);
+}
+/**
+ * @description Freezes an object shallowly, preventing modifications to the top-level properties but allowing nested objects to be modified.
+ * @param obj {T}
+ * @returns
+ */
+export function freezeObjectShallow(obj) {
+    if (!isObject(obj))
+        return obj;
+    return Object.freeze({ ...obj });
+}
+/**
+ * @description Freezes specific keys of an object, preventing modifications to those keys while allowing others to be modified.
+ * @param obj {T}
+ * @param keys {Array<string | number>}
+ * @returns
+ */
+export function freezeObjectPickKeys(obj, keys) {
+    if (!isObject(obj))
+        void 0;
+    Object.keys(obj).forEach(key => {
+        if (keys.includes(key)) {
+            Object.defineProperty(obj, key, {
+                value: obj[key],
+                writable: false,
+                configurable: false,
+                enumerable: true
+            });
+        }
+    });
+}

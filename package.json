@@ -37,7 +37,8 @@
         "Design Mode",
         "Set",
         "Map",
-        "Browser"
+        "Browser",
+        "Proxy"
     ],
     "author": "Jason_Zuo",
     "repository": {

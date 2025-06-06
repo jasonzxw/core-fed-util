@@ -16,6 +16,7 @@ export * from './utils/Json';
 export * from './utils/Set';
 export * from './utils/Map';
 export * from './utils/Browser';
+export * from './utils/Proxy';
 export * from './dataStructure/LinkedList';
 export * from './dataStructure/Queue';
 export * from './dataStructure/Stack';

@@ -62,5 +62,24 @@ export declare function objectToMap(obj: ObjType): Map<string, any>;
  * @returns
  */
 export declare function mergeObjects<T extends ObjType>(...objects: T[]): T;
+/**
+ * @description Freezes an object and its nested objects to prevent further modifications.
+ * @param obj {T}
+ * @returns
+ */
+export declare function freezeObject<T extends ObjType>(obj: T): Readonly<T>;
+/**
+ * @description Freezes an object shallowly, preventing modifications to the top-level properties but allowing nested objects to be modified.
+ * @param obj {T}
+ * @returns
+ */
+export declare function freezeObjectShallow<T extends ObjType>(obj: T): Readonly<T>;
+/**
+ * @description Freezes specific keys of an object, preventing modifications to those keys while allowing others to be modified.
+ * @param obj {T}
+ * @param keys {Array<string | number>}
+ * @returns
+ */
+export declare function freezeObjectPickKeys<T extends ObjType>(obj: T, keys: Array<string | number>): void;
 export {};
 //# sourceMappingURL=Obj.d.ts.map
